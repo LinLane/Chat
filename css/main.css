@@ -1,0 +1,277 @@
+@font-face {
+    font-family: 'Karla-Bold'; 
+    src: url(../fonts/Karla-Bold.ttf); 
+}
+@font-face {
+    font-family: 'Karla-BoldItalic'; 
+    src: url(../fonts/Karla-BoldItalic.ttf); 
+}
+@font-face {
+    font-family: 'Karla-Italic'; 
+    src: url(../fonts/Karla-Italic.ttf); 
+}
+@font-face {
+    font-family: 'Karla-Regular'; 
+    src: url(../fonts/Karla-Regular.ttf); 
+}
+body {
+    background-color: #cccccc;
+    -moz-background-size: 100%; /* Firefox 3.6+ */
+    -webkit-background-size: 100%; /* Safari 3.1+ и Chrome 4.0+ */
+    -o-background-size: 100%; /* Opera 9.6+ */
+    background-size: 100%;
+    font-family: 'Karla-Regular', sans-serif;
+    margin: 0;
+}
+.wrapper {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.main_container {
+    display: table-cell;
+    vertical-align: middle;
+}
+.align_container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 375px;
+    max-height: 667px;
+}
+.chat_window {
+    background-image: url('../img/background_chat_1.png');
+    width: 100%;
+    height: 667px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.login_window {
+    background-image: url('../img/background_login_1.png');
+    width: 100%;
+    height: 667px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+.chat_window_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.chat_header {
+    font-size: 17px;
+    color: #ffffff;
+    padding-top: 8%;
+    padding-left: 20px;
+    
+}
+.js-back_icon {
+    width: 7px;
+}
+.chat_header span {
+    text-align: center;
+    padding-left: 120px;
+}
+.time_block {
+    margin: 30px 0 20px 0;
+    text-align: center;
+}
+.clock {
+    display: inline;
+}
+.clock_icon {
+    width: 17.5px;
+}
+.time_text {
+    display: inline;
+    text-transform: uppercase;
+    font-family: 'Karla-Bold', sans-serif;
+    font-size: 11px;
+    color: #ffffff;
+    padding: 5px;
+}
+.js-message_container {
+    overflow-y: scroll;
+    height: 478px;
+}
+.receive_message {
+    float: left;
+    margin-left: 65px;
+    background-color: #ffffff;
+    max-width: 285px;
+    margin-bottom: 20px;
+}
+.js-sent_message {
+    float: right;
+    background-color: #ffffff;
+    margin-right: 65px; 
+    max-width: 285px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+.js-text_message {
+    font-size: 15px;
+    padding: 0 25px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+.js-message_data {
+    font-size: 10px;
+    padding: 0 25px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    text-align: right;
+}
+.js-author_message {
+    padding-right: 10px;
+}
+.js-time_message {
+    color: #ad807d;
+}
+.sent_message .time_message  {
+    text-align: right;
+}
+.js-new_message {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    font-size: 15px;
+    color: #ffffff;
+    resize: none;
+    height: 30px;
+    background-color: #000000;
+    border: 0;
+    overflow: hidden;
+}
+.js-new_message:focus {
+    outline : none; 
+}
+.js-send_icon {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+}
+
+
+textarea::-webkit-input-placeholder {
+    font-family: 'Karla-Regular', sans-serif;
+    color: #ffffff;
+} 
+textarea::-moz-placeholder {
+    font-family: 'Karla-Regular', sans-serif;
+    color: #ffffff;
+}
+textarea:-moz-placeholder {
+    font-family: 'Karla-Regular', sans-serif;
+    color: #ffffff;
+}
+textarea:-ms-input-placeholder {
+    font-family: 'Karla-Regular', sans-serif;
+    color: #ffffff;
+}
+.js-message_container::-webkit-scrollbar { width: 0; }
+ 
+.js-message_container { -ms-overflow-style: none; }
+
+.js-message_container { overflow: -moz-scrollbars-none; }
+
+
+
+h1 {
+    position: relative;
+    font-size: 100px;
+    padding-top: 0.600em;
+    margin: 0;
+    margin-left: -0.080em;
+    letter-spacing: -0.050em;
+    color: #ffffff;
+    z-index: 2;
+    font-family: 'Karla-Bold', sans-serif;
+}
+.chat_icon {
+    position: absolute;
+    width: 180px; 
+    left: 50%;
+    margin-left: -5.625em;
+    top: 7.813em;
+    z-index: 1;
+}
+.background_form {
+    position: absolute;
+    background-color: #ffffff;
+    /* width: 20.313em; */
+    height: 16.875em;
+    bottom: 10%;
+    left: 7%;
+    right: 7%;
+    /* margin-left: -10.156em; */
+    z-index: 3;
+}
+.container_form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.form_footer {
+    position: absolute;
+    background-color: #00a0ff;
+    width: 100%;
+    height: 3.750em;
+    bottom: 0;
+}
+.form_content {
+    position: relative;
+    padding: 30px 40px;
+    height: 100%;
+}
+.form_header {
+    font-family: 'Karla-Bold', sans-serif;
+    font-size: 0.625em;
+    color: #ad807d;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.js-login_input_field {
+    width: 100%;
+    outline: none;
+    border: 0;
+    font-size: 0.781em;
+    letter-spacing: 0.08em;
+    border-bottom: 0.160em solid #00000020;
+    padding-bottom: 1.040em;
+    padding-top: 0.160em;
+}
+.password_header {
+    margin-top: 30px;
+}
+.password_input_field {
+    width: 100%;
+    outline: none;
+    border: 0;
+    font-size: 1.313em;
+    letter-spacing: 0.12em;
+    border-bottom: 0.095em solid #00000020;
+    padding-bottom: 0.286em;
+
+}
+.container_form_footer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.js-start_button {
+    font-family: 'Karla-Bold', sans-serif;
+    position: absolute;
+    right: 3.077em;
+    text-align: right;
+    bottom: 24px;
+    padding-right: 0;
+    font-size: 0.813em;
+    margin-top: 20px;
+    color: #ffffff;
+    text-decoration: none;  
+    background: #ffffff00;
+    border: 0;
+}
