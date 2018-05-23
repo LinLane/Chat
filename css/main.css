@@ -94,6 +94,17 @@ body {
     overflow-y: scroll;
     height: 478px;
 }
+.js-message_container::-webkit-scrollbar { 
+    width: 0; 
+}
+ 
+.js-message_container { 
+    -ms-overflow-style: none; 
+}
+
+.js-message_container { 
+    overflow: -moz-scrollbars-none; 
+}
 .receive_message {
     float: left;
     margin-left: 65px;
@@ -171,11 +182,7 @@ textarea:-ms-input-placeholder {
     font-family: 'Karla-Regular', sans-serif;
     color: #ffffff;
 }
-.js-message_container::-webkit-scrollbar { width: 0; }
- 
-.js-message_container { -ms-overflow-style: none; }
 
-.js-message_container { overflow: -moz-scrollbars-none; }
 
 
 
