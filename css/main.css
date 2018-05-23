@@ -23,76 +23,69 @@ body {
     font-family: 'Karla-Regular', sans-serif;
     margin: 0;
 }
-.wrapper {
-    display: table;
-    position: absolute;
-    height: 100%;
+.flex-container {
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+    /* flex-direction: column; */
+    max-height: 100%;
     width: 100%;
-}
-.main_container {
-    display: table-cell;
-    vertical-align: middle;
-}
-.align_container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 375px;
-    max-height: 667px;
 }
 .chat_window {
     background-image: url('../img/background_chat_1.png');
-    width: 100%;
-    height: 667px;
+    max-width: 375px;
+    max-height: 667px;
     background-size: 100%;
     background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
 }
-.login_window {
-    background-image: url('../img/background_login_1.png');
-    width: 100%;
-    height: 667px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-}
-.chat_window_container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-.chat_header {
+.chat_header_container {
     font-size: 17px;
     color: #ffffff;
-    padding-top: 8%;
-    padding-left: 20px;
+    margin-top: 8%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     
 }
 .js-back_icon {
-    width: 7px;
+    flex-grow: 2;
 }
-.chat_header span {
+.js-back_icon img {
+    width: 7px;
+    margin-left: 20px;
+}
+.chat_header {
     text-align: center;
-    padding-left: 120px;
+    flex-grow: 18;
+}
+.empty_col {
+    flex-grow: 2;
+    margin-right: 20px;
 }
 .time_block {
-    margin: 30px 0 20px 0;
-    text-align: center;
-}
-.clock {
-    display: inline;
+    margin: 41px 0 24px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .clock_icon {
     width: 17.5px;
+    margin-right: 13px;
 }
 .time_text {
-    display: inline;
     text-transform: uppercase;
     font-family: 'Karla-Bold', sans-serif;
     font-size: 11px;
     color: #ffffff;
-    padding: 5px;
+    /* padding: 5px; */
+    letter-spacing: 0.7px;
 }
 .js-message_container {
     overflow-y: scroll;
-    height: 478px;
+    height: 458px;
+    z-index: 2;
 }
 .js-message_container::-webkit-scrollbar { 
     width: 0; 
@@ -144,25 +137,27 @@ body {
     text-align: right;
 }
 .js-new_message {
-    position: absolute;
-    bottom: 10px;
-    left: 50px;
+    margin-left: 63px;
     font-size: 15px;
     color: #ffffff;
     resize: none;
     height: 30px;
-    background-color: #000000;
+    background-color: #00000000;
     border: 0;
     overflow: hidden;
+    z-index: 2;
 }
 .js-new_message:focus {
     outline : none; 
 }
+
 .js-send_icon {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
+    float: right;
+    margin-top: 10px;
+    margin-right: 25px;
+    margin-bottom: -13px;
     width: 60px;
+    z-index: 1;
 }
 
 
@@ -185,9 +180,17 @@ textarea:-ms-input-placeholder {
 
 
 
-
+.login_window {
+    background-image: url('../img/background_login_1.png');
+    width: 375px;
+    height: 667px;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
 h1 {
-    position: relative;
     font-size: 100px;
     padding-top: 0.600em;
     margin: 0;
@@ -198,38 +201,34 @@ h1 {
     font-family: 'Karla-Bold', sans-serif;
 }
 .chat_icon {
-    position: absolute;
     width: 180px; 
-    left: 50%;
-    margin-left: -5.625em;
-    top: 7.813em;
+    margin-left: 90px;
+    margin-top: -50px;
     z-index: 1;
 }
+.main {
+    flex: 1 0 auto;
+}
 .background_form {
-    position: absolute;
     background-color: #ffffff;
-    /* width: 20.313em; */
-    height: 16.875em;
-    bottom: 10%;
-    left: 7%;
-    right: 7%;
-    /* margin-left: -10.156em; */
     z-index: 3;
+    flex: 0 50px auto;
+    display: flex;
+    margin: 0 20px 0 20px;
+    margin-bottom: 80px;
 }
 .container_form {
-    position: relative;
     width: 100%;
     height: 100%;
 }
 .form_footer {
-    position: absolute;
     background-color: #00a0ff;
     width: 100%;
     height: 3.750em;
-    bottom: 0;
+    align-self: flex-end;
 }
 .form_content {
-    position: relative;
+    margin: 20px;
     padding: 30px 40px;
     height: 100%;
 }
@@ -264,16 +263,12 @@ h1 {
 
 }
 .container_form_footer {
-    position: relative;
     width: 100%;
     height: 100%;
 }
 .js-start_button {
     font-family: 'Karla-Bold', sans-serif;
-    position: absolute;
-    right: 3.077em;
     text-align: right;
-    bottom: 24px;
     padding-right: 0;
     font-size: 0.813em;
     margin-top: 20px;

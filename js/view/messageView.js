@@ -6,8 +6,8 @@ export default class MessageView {
     constructor(text, author, time) {
         this.messageBlock = '<div class="js-sent_message"></div>';
         this.messageText = '<p class="js-text_message">' + text + '</p>';
-        this.messageAuthor = '<span class="js-author_message">' + author + '</span>';
         this.messageData = '<div class="js-message_data"></div>';
+        this.messageAuthor = '<span class="js-author_message">' + author + '</span>';
         this.time = new Time().diff(time);
         this.messageTime = '<span class="js-time_message">' + this.time + '</span> ';
     }

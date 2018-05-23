@@ -7,7 +7,7 @@ var ReactDOM = require('react-dom');
 
 $(document).ready(function (){
 
-    var $container = $(document).find('.align_container');
+    var $container = $(document).find('.flex-container');
 
     var chat = new ChatWindow($container);
     chat.init();
