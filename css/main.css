@@ -25,28 +25,32 @@ body {
 }
 .flex-container {
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
-    /* flex-direction: column; */
+    display: -webkit-flex; /* Safari */
     max-height: 100%;
     width: 100%;
 }
 .chat_window {
     background-image: url('../img/background_chat_1.png');
-    max-width: 375px;
-    max-height: 667px;
+    width: 375px;
+    height: 667px;
     background-size: 100%;
     background-repeat: no-repeat;
+    margin: auto;
     display: flex;
+    display: -webkit-flex; /* Safari */
     flex-direction: column;
+    -webkit-flex-direction: column; /* Safari */
 }
 .chat_header_container {
     font-size: 17px;
     color: #ffffff;
     margin-top: 8%;
     display: flex;
+    display: -webkit-flex; /* Safari */
     flex-direction: row;
+    -webkit-flex-direction: row; /* Safari */
     justify-content: center;
+    -webkit-justify-content: center; /* Safari */
     
 }
 .js-back_icon {
@@ -67,8 +71,11 @@ body {
 .time_block {
     margin: 41px 0 24px 0;
     display: flex;
+    display: -webkit-flex; /* Safari */
     justify-content: center;
+    -webkit-justify-content: center; /* Safari */
     align-items: center;
+    -webkit-align-items: center; /* Safari */
 }
 .clock_icon {
     width: 17.5px;
@@ -188,66 +195,71 @@ textarea:-ms-input-placeholder {
     background-repeat: no-repeat;
     margin: auto;
     display: flex;
+    display: -webkit-flex; /* Safari */
     flex-direction: column;
+    -webkit-flex-direction: column; /* Safari */
 }
 h1 {
     font-size: 100px;
-    padding-top: 0.600em;
+    padding-top: 60px;
     margin: 0;
-    margin-left: -0.080em;
-    letter-spacing: -0.050em;
+    margin-left: -8px;
+    letter-spacing: -5px;
     color: #ffffff;
-    z-index: 2;
     font-family: 'Karla-Bold', sans-serif;
+    position: relative;
 }
 .chat_icon {
-    width: 180px; 
-    margin-left: 90px;
-    margin-top: -50px;
-    z-index: 1;
+    width: 100px; 
+    margin-left: 140px;
+    margin-top: -30px;
 }
 .main {
     flex: 1 0 auto;
+    -webkit-flex: 1 0 auto; /* Safari */
+
 }
 .background_form {
-    background-color: #ffffff;
-    z-index: 3;
-    flex: 0 50px auto;
-    display: flex;
-    margin: 0 20px 0 20px;
-    margin-bottom: 80px;
+    background-color: #ffffff;      
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto; /* Safari */
+    margin: 0 25px;
+    margin-bottom: 70px;
 }
-.container_form {
+.container_form {   
     width: 100%;
     height: 100%;
 }
 .form_footer {
     background-color: #00a0ff;
     width: 100%;
-    height: 3.750em;
-    align-self: flex-end;
+    height: 60px;
+    display: flex;
+    display: -webkit-flex; /* Safari */
+    justify-content: flex-end;
+    -webkit-justify-content: flex-end; /* Safari */
 }
 .form_content {
     margin: 20px;
-    padding: 30px 40px;
+    padding: 10px 20px;
     height: 100%;
 }
 .form_header {
     font-family: 'Karla-Bold', sans-serif;
-    font-size: 0.625em;
+    font-size: 10px;
     color: #ad807d;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 1px;
 }
 .js-login_input_field {
     width: 100%;
     outline: none;
     border: 0;
-    font-size: 0.781em;
-    letter-spacing: 0.08em;
-    border-bottom: 0.160em solid #00000020;
-    padding-bottom: 1.040em;
-    padding-top: 0.160em;
+    font-size: 12px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #00000020;
+    padding-bottom: 12px;
+    padding-top: 2px;
 }
 .password_header {
     margin-top: 30px;
@@ -256,22 +268,18 @@ h1 {
     width: 100%;
     outline: none;
     border: 0;
-    font-size: 1.313em;
-    letter-spacing: 0.12em;
-    border-bottom: 0.095em solid #00000020;
-    padding-bottom: 0.286em;
+    font-size: 21px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #00000020;
+    padding-bottom: 6px;
 
-}
-.container_form_footer {
-    width: 100%;
-    height: 100%;
 }
 .js-start_button {
     font-family: 'Karla-Bold', sans-serif;
     text-align: right;
     padding-right: 0;
-    font-size: 0.813em;
-    margin-top: 20px;
+    font-size: 13px;
+    margin-right: 40px;
     color: #ffffff;
     text-decoration: none;  
     background: #ffffff00;

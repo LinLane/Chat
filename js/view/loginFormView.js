@@ -16,9 +16,7 @@ export default class LoginFormView {
                                         <input class="password_input_field" type="password" name="password" value="">
                                     </div>
                                     <div class="form_footer">
-                                        <div class="container_form_footer">
-                                            <button type="button" class="js-start_button">Get Started</button>
-                                        </div>
+                                        <button type="button" class="js-start_button">Get Started</button>
                                     </div>
                                 </form>
                             </div>
