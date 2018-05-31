@@ -5,7 +5,7 @@ export default class UserStorage {
         this.user = '';
         this.storageKey = 'userName';
     }
-    hasInlogin() {
+    isLogined() {
         if(localStorage.getItem(this.storageKey)) {
             return true;
         } else {
@@ -20,7 +20,7 @@ export default class UserStorage {
         this.user = userName;
     }
     get() {
-        return this.user;
-        // return localStorage.getItem('userName');
+        // return this.user;
+        return localStorage.getItem('userName');
     }
 }

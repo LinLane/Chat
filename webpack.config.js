@@ -3,7 +3,7 @@
 const webpack = require('webpack');
 
 module.exports = {
-    entry: './js/controller/app.js',
+    entry: './js/controller/app.jsx',
     output: {
       filename: 'build.js'
     },

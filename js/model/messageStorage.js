@@ -1,12 +1,10 @@
 'use strict';
-import Message from "./message";
-import MessageStorageView from "../view/messageStorageView";
+import Message from "./message.js";
+import MessageStorageView from "../view/messageStorageView.jsx";
 
 export default class MessageStorage {
     constructor() {
         // localStorage.clear();
-        this.storage = [];
-        // this.storage = localStorage.getItem('messageStorage');
         if(localStorage.getItem('messageStorage') === null) {
             this.storage = [];
         } else {
@@ -26,6 +24,9 @@ export default class MessageStorage {
     }
     get() {
         this.storage = JSON.parse(localStorage.getItem('messageStorage'));
+        if(this.storage == null) {
+            this.storage = [];
+        }
         return this.storage;
     }
     remove() {
